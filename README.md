@@ -80,6 +80,8 @@ https://app-manifest.firebaseapp.com/
 
 ## Полезные ссылки
 
+* [Are Service Workers Ready?](https://jakearchibald.github.io/isserviceworkerready/)
+* [Getting Started with Service Workers](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
 * [The Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [Progressive Web Apps 101: the What, Why and How](https://medium.freecodecamp.org/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2)
 * [Progressive Web Apps 102: Building a Progressive Web App from scratch](https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040)
