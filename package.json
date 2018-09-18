@@ -1,0 +1,21 @@
+{
+  "name": "fast-start-with-pwa",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1 -p 3002"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://kdmatrosov@github.com/kdmatrosov/fast-start-with-pwa.git"
+  },
+  "author": "Kirill Matrosov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdmatrosov/fast-start-with-pwa/issues"
+  },
+  "homepage": "https://github.com/kdmatrosov/fast-start-with-pwa#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
