@@ -1,0 +1,11 @@
+.post {
+    padding: 8px;
+}
+
+.post:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.post div:first-child {
+    font-weight: bold;
+}

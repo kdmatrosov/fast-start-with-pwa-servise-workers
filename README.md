@@ -50,6 +50,8 @@ SPA можно преобразовать в PWA, так же как и любу
 
 ## Web App Manifest Generator
 
+Сервис для генерации манифеста для проекта (open source)
+
 https://app-manifest.firebaseapp.com/
  
 ---
@@ -59,6 +61,12 @@ https://app-manifest.firebaseapp.com/
 ```Service Workers``` представляют собой процессы в фоновом режиме, которые обеспечивают взаимодействие между приложением и сетью. Данные процессы способны перехватывать http-запросы и кэшировать информацию, что может быть использовано для подгрузки данных при отсутствии сети.
 В плане реализации ```Service Workers``` - это javascript скрипты, которые слушают события и выполняют задачи.
 
+## HTML
+```html
+<link rel="manifest" href="/manifest.json">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#2196f3">
+```
 
 
 ## Полезные ссылки
