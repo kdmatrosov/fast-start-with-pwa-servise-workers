@@ -17,7 +17,6 @@ async function fetchTrending() {
 }
 
 window.addEventListener('load', async e => {
-  await fetchTrending();
 
   if ('serviceWorker' in navigator) {
     try {
@@ -29,5 +28,6 @@ window.addEventListener('load', async e => {
 
     }
   }
+  await fetchTrending();
 });
 
