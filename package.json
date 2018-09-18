@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "http-server -c-1 -p 3002"
+    "start": "http-server -c10 -p 3002"
   },
   "repository": {
     "type": "git",
