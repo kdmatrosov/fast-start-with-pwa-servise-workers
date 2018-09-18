@@ -69,6 +69,18 @@ https://app-manifest.firebaseapp.com/
 ```Service Workers``` представляют собой процессы в фоновом режиме, которые обеспечивают взаимодействие между приложением и сетью. Данные процессы способны перехватывать http-запросы и кэшировать информацию, что может быть использовано для подгрузки данных при отсутствии сети.
 В плане реализации ```Service Workers``` - это javascript скрипты, которые слушают события и выполняют задачи.
 
+**Browser support**
+
+![Service Workers Browser support](readme-images/serviceworkersbrowsersupport.png)
+
+## Service Worker lifecycle
+
+1. register
+1. installation
+1. activation
+1. idle
+1. terminations
+
 ## HTML
 Добавьте в тэг ```head```
 ```html
