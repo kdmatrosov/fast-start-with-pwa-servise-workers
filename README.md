@@ -48,9 +48,17 @@ SPA можно преобразовать в PWA, так же как и любу
 
 ---
 
+## manifest.json
+
+Обычный json файл, содержащий информацию для браузера, как ваше веб-приложение должно себя вести, когда "установлено" на мобильное устройство. 
+
+Наличие этого файла обязательно в Chrome для показа предложения ```Add to Home Screen``` 
+
+---
+
 ## Web App Manifest Generator
 
-Сервис для генерации манифеста для проекта (open source)
+Сервис генерации манифеста для проекта (open source)
 
 https://app-manifest.firebaseapp.com/
  
@@ -62,6 +70,7 @@ https://app-manifest.firebaseapp.com/
 В плане реализации ```Service Workers``` - это javascript скрипты, которые слушают события и выполняют задачи.
 
 ## HTML
+Добавьте в тэг ```head```
 ```html
 <link rel="manifest" href="/manifest.json">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,4 +79,7 @@ https://app-manifest.firebaseapp.com/
 
 
 ## Полезные ссылки
+
+* [The Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [Progressive Web Apps 101: the What, Why and How](https://medium.freecodecamp.org/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2)
+* [Progressive Web Apps 102: Building a Progressive Web App from scratch](https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040)
