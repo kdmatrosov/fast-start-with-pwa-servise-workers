@@ -3,12 +3,19 @@
 ## Что такое Progressive Web Apps
 Веб-проекты, которые выглядят и ведут себя, как мобильные приложения:
 * Работают в режиме ```offline```
-* Имеют иконку на рабочес столе
+* Имеют иконку на рабочем столе
 * Синхронизируют данные в фоновом режиме
+
 
 ---
 
-## Возможности
+## Плюсы и возможности
+**Плюсы**
+* Надежные - моментальная загрузка, вы никогда не увидите динозаврика
+* Быстрые - быстрый отклик на действия пользователя с плавной анимацией и скроллом
+* Чарующие - предоставляется максимально возможный нативный пользовательский опыт
+
+**Возможности**
 * ```Push``` уведомления
 * Фоновая синхронизация
 * Доступность ```offline```
@@ -72,6 +79,7 @@ https://app-manifest.firebaseapp.com/
 **Browser support**
 
 ![Service Workers Browser support](readme-images/serviceworkersbrowsersupport.png)
+---
 
 ## Service Worker lifecycle
 
@@ -80,6 +88,16 @@ https://app-manifest.firebaseapp.com/
 1. activation
 1. idle
 1. terminations
+---
+## Тестирование на реальном устройстве
+
+1. Chrome dev tools -> more tools -> remote devices
+1. Дать доступ на экране устройства
+1. Поставить галочку ```Port forwarding```, добавить новое правило с адресом PWA
+1. Кликнуть по имени устройства
+1. New tab -> адрес PWA -> inspect
+
+---
 
 ## HTML
 Добавьте в тэг ```head```
@@ -89,16 +107,12 @@ https://app-manifest.firebaseapp.com/
 <meta name="theme-color" content="#2196f3">
 ```
 
-## Тестирование на реальном устройстве
-
-1. Chrome dev tools -> more tools -> remote devices
-1. Дать доступ на экране устройства
-1. Поставить галочку ```Port forwarding```, добавить новое правило с адресом PWA
-1. Кликнуть по имени устройства
-1. New tab -> адрес PWA -> inspect
+---
+### 
 
 ## Полезные ссылки
 
+* [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 * [Are Service Workers Ready?](https://jakearchibald.github.io/isserviceworkerready/)
 * [Getting Started with Service Workers](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
 * [The Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
