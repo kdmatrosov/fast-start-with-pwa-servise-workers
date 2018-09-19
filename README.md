@@ -99,6 +99,7 @@ https://app-manifest.firebaseapp.com/
 **Browser support**
 
 ![Service Workers Browser support](readme-images/serviceworkersbrowsersupport.png)
+
 ---
 
 ## Service Worker lifecycle
@@ -108,6 +109,8 @@ https://app-manifest.firebaseapp.com/
 1. activation
 1. idle
 1. termination
+
+![Service Worker](readme-images/serviceworker.png)
 ---
 ### Кэширование с Service Workers
 **Зачем?**
@@ -124,6 +127,9 @@ Cache API - механизм для хранения пары запрос/от�
 * css
 * картинки
 * шрифты
+
+![Cache](readme-images/cache_static.png)
+
 ---
 ## Полезные ссылки
 

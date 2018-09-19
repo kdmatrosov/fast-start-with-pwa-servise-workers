@@ -24,7 +24,6 @@ self.addEventListener('fetch', event => {
   } else {
     event.respondWith(networkFirst(request));
   }
-
 });
 
 async function cacheData(request) {
@@ -34,14 +33,11 @@ async function cacheData(request) {
 
 async function networkFirst(request) {
   const cache = await caches.open('dynamic-data');
-
   try {
     const response = await fetch(request);
     cache.put(request, response.clone());
     return response;
   } catch (error) {
     return await cache.match(request);
-
   }
-
 }
