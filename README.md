@@ -71,24 +71,6 @@ https://app-manifest.firebaseapp.com/
  
 ---
 
-## Service Workers
-
-```Service Workers``` представляют собой процессы в фоновом режиме, которые обеспечивают взаимодействие между приложением и сетью. Данные процессы способны перехватывать http-запросы и кэшировать информацию, что может быть использовано для подгрузки данных при отсутствии сети.
-В плане реализации ```Service Workers``` - это javascript скрипты, которые слушают события и выполняют задачи.
-
-**Browser support**
-
-![Service Workers Browser support](readme-images/serviceworkersbrowsersupport.png)
----
-
-## Service Worker lifecycle
-
-1. register
-1. installation
-1. activation
-1. idle
-1. terminations
----
 ## Тестирование на реальном устройстве
 
 1. Chrome dev tools -> more tools -> remote devices
@@ -108,13 +90,47 @@ https://app-manifest.firebaseapp.com/
 ```
 
 ---
-### 
 
+## Service Workers
+
+```Service Workers``` представляют собой процессы в фоновом режиме, которые обеспечивают взаимодействие между приложением и сетью. Данные процессы способны перехватывать http-запросы и кэшировать информацию, что может быть использовано для подгрузки данных при отсутствии сети.
+В плане реализации ```Service Workers``` - это javascript скрипты, которые слушают события и выполняют задачи.
+
+**Browser support**
+
+![Service Workers Browser support](readme-images/serviceworkersbrowsersupport.png)
+---
+
+## Service Worker lifecycle
+
+1. register
+1. installation
+1. activation
+1. idle
+1. termination
+---
+### Кэширование с Service Workers
+**Зачем?**
+* Плохое соединение
+* Нет соединения (лифт/метро)
+* Lie-Fie
+
+**Как?**
+
+Cache API - механизм для хранения пары запрос/ответ (без поддержки в Safari)
+
+**Что?**
+* js
+* css
+* картинки
+* шрифты
+---
 ## Полезные ссылки
 
 * [Progressive Web Apps](https://developers.google.com/web/progressive-web-apps/)
 * [Are Service Workers Ready?](https://jakearchibald.github.io/isserviceworkerready/)
 * [Getting Started with Service Workers](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
+* [Cache MDN](https://developer.mozilla.org/en-US/docs/Web/API/Cache)
 * [The Web App Manifest](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [Progressive Web Apps 101: the What, Why and How](https://medium.freecodecamp.org/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2)
 * [Progressive Web Apps 102: Building a Progressive Web App from scratch](https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040)
