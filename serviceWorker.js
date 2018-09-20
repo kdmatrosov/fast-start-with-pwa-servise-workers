@@ -1,12 +1,17 @@
 const staticAssets = [
   './',
+  './index.html',
+  './offline.html',
   './styles.css',
   './app.js'
 ];
 
+const STATIC_CACHE_NAME = 'static-data';
+const DYNAMIC_CACHE_NAME = 'dynamic-data';
+
 self.addEventListener('install', async event => {
   //self.skipWaiting();
-  const cache = await caches.open('static-data');
+  const cache = await caches.open(STATIC_CACHE_NAME);
   console.log('install');
   cache.addAll(staticAssets);
 });
@@ -28,12 +33,11 @@ self.addEventListener('fetch', event => {
 });
 
 async function cacheData(request) {
-  const cachedResponse = await caches.match(request);
-  return cachedResponse || fetch(request);
+  return await caches.match(request) || await caches.match('/offline.html') || fetch(request);
 }
 
 async function networkFirst(request) {
-  const cache = await caches.open('dynamic-data');
+  const cache = await caches.open(DYNAMIC_CACHE_NAME);
   try {
     const response = await fetch(request);
     cache.put(request, response.clone());
