@@ -1,9 +1,9 @@
 const staticAssets = [
-  './',
-  './index.html',
-  './offline.html',
-  './styles.css',
-  './app.js'
+  '/',
+  '/index.html',
+  '/offline.html',
+  '/styles.css',
+  '/app.js'
 ];
 
 const STATIC_CACHE_NAME = 'static-data';
@@ -28,7 +28,11 @@ self.addEventListener('fetch', event => {
 });
 
 async function cacheData(request) {
-  return await caches.match(request) || await caches.match('/offline.html') || networkFirst(request);
+  const cashedRequest = await caches.match(request);
+  if (staticAssets.some(as => request.url.indexOf(as) >= 0)) {
+    return cashedRequest || await caches.match('/offline.html');
+  }
+  return cashedRequest || networkFirst(request);
 }
 
 async function networkFirst(request) {
