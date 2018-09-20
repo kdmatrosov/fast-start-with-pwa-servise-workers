@@ -5,6 +5,7 @@ const staticAssets = [
 ];
 
 self.addEventListener('install', async event => {
+  //self.skipWaiting();
   const cache = await caches.open('static-data');
   console.log('install');
   cache.addAll(staticAssets);
