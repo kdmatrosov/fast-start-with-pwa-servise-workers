@@ -24,16 +24,11 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', event => {
   const { request } = event;
-  const url = new URL(request.url);
-  if (url.origin === location.origin) {
-    event.respondWith(cacheData(request));
-  } else {
-    event.respondWith(networkFirst(request));
-  }
+  event.respondWith(cacheData(request));
 });
 
 async function cacheData(request) {
-  return await caches.match(request) || await caches.match('/offline.html') || fetch(request);
+  return await caches.match(request) || await caches.match('/offline.html') || networkFirst(request);
 }
 
 async function networkFirst(request) {
