@@ -1,4 +1,4 @@
-# Fast start with PWA
+# Fast start with PWA. Service Workers. Кеширование
 
 ## Что такое Progressive Web Apps
 Веб-проекты, которые выглядят и ведут себя, как мобильные приложения:
