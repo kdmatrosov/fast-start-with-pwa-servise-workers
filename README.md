@@ -162,3 +162,4 @@ Cache API - механизм для хранения пары запрос/от�
 * [Progressive Web Apps 101: the What, Why and How](https://medium.freecodecamp.org/progressive-web-apps-101-the-what-why-and-how-4aa5e9065ac2)
 * [Progressive Web Apps 102: Building a Progressive Web App from scratch](https://medium.freecodecamp.org/progressive-web-apps-102-building-a-progressive-web-app-from-scratch-397b72168040)
 * [Response.clone()](https://developer.mozilla.org/en-US/docs/Web/API/Response/clone), [Why do we perform response.clone()?](https://github.com/mozilla/serviceworker-cookbook/issues/264)
+* [How to Use the 'beforeinstallprompt'](https://love2dev.com/blog/beforeinstallprompt/)

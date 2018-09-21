@@ -31,11 +31,20 @@ window.addEventListener('load', async e => {
   await fetchTrending();
 });
 
-
-window.addEventListener('beforeinstallprompt', function(e) {
+let deferredPrompt = null;
+window.addEventListener('beforeinstallprompt', function (e) {
   console.log('beforeinstallprompt');
   // Prevent Chrome 67 and earlier from automatically showing the prompt
   e.preventDefault();
   // Stash the event so it can be triggered later.
   deferredPrompt = e;
 });
+
+function addToHomeScreen() {
+  deferredPrompt.prompt();
+  deferredPrompt.userChoice
+    .then(function (choiceResult) {
+      console.log(choiceResult.outcome);
+      deferredPrompt = null;
+    });
+}
