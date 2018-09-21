@@ -3,7 +3,8 @@ const staticAssets = [
   '/index.html',
   '/offline.html',
   '/styles.css',
-  '/app.js'
+  '/app.js',
+  '/manifest.json'
 ];
 
 const STATIC_CACHE_NAME = 'static-data';
@@ -30,7 +31,7 @@ self.addEventListener('fetch', event => {
 async function cacheData(request) {
   const cashedRequest = await caches.match(request);
   if (staticAssets.some(sa => request.url.indexOf(sa) >= 0) || request.headers.get('accept').includes('text/html')) {
-    return cashedRequest || await caches.match('/offline.html');
+    return cashedRequest || await caches.match('/offline.html') || networkFirst(request);
   }
   return cashedRequest || networkFirst(request);
 }

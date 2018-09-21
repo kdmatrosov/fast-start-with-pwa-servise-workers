@@ -17,15 +17,12 @@ async function fetchTrending() {
 }
 
 window.addEventListener('load', async e => {
-
   if ('serviceWorker' in navigator) {
     try {
       await navigator.serviceWorker.register('serviceWorker.js');
       console.log('SW registered');
-
     } catch (error) {
       console.log('SW failed');
-
     }
   }
   await fetchTrending();
@@ -40,7 +37,10 @@ window.addEventListener('beforeinstallprompt', function (e) {
   deferredPrompt = e;
 });
 
+document.querySelector('.center').addEventListener('click', addToHomeScreen);
+
 function addToHomeScreen() {
+  console.log('addToHomeScreen');
   deferredPrompt.prompt();
   deferredPrompt.userChoice
     .then(function (choiceResult) {
