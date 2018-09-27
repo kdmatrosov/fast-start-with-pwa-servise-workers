@@ -117,8 +117,10 @@ https://app-manifest.firebaseapp.com/
 1. termination
 
 ![Service Worker lifecycle](readme-images/lifecycle.png)
-
+**serviceWorker.js**
 ![Service Worker](readme-images/serviceworker.png)
+**app.js**
+![Service Worker](readme-images/serviceregister.png)
 
 ---
 
