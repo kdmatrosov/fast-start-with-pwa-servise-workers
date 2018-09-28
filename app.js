@@ -43,10 +43,12 @@ window.addEventListener('load', function () {
 
 function addToHomeScreen() {
   console.log('addToHomeScreen');
-  deferredPrompt.prompt();
-  deferredPrompt.userChoice
-    .then(function (choiceResult) {
-      console.log(choiceResult.outcome);
-      deferredPrompt = null;
-    });
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice
+      .then(function (choiceResult) {
+        console.log(choiceResult.outcome);
+        deferredPrompt = null;
+      });
+  }
 }
