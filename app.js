@@ -37,7 +37,9 @@ window.addEventListener('beforeinstallprompt', function (e) {
   deferredPrompt = e;
 });
 
-document.querySelector('.center').addEventListener('click', addToHomeScreen);
+window.addEventListener('load', function () {
+  document.querySelector('.center').addEventListener('click', addToHomeScreen);
+});
 
 function addToHomeScreen() {
   console.log('addToHomeScreen');
